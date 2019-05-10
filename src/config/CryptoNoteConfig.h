@@ -22,7 +22,7 @@ const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 1250902;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 40; //21600; // 30 days
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 5160; // 7 days
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V3         = 3 * DIFFICULTY_TARGET;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT_V4         = 6 * DIFFICULTY_TARGET;
@@ -57,7 +57,7 @@ const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(42510340
 --print-genesis-tx --genesis-block-reward-address <premine wallet address>
 
 For example:
-TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
+gravyd --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BPEbNeCHFZ1fuDCYCZ3vW5H5LXN4K2M2MHUpTENip9bbavpHvvPwb4NDkBWrNgURAd5DB38FHXWZyoBh4wW
 
 * Take the hash printed, and replace it with the hash below in GENESIS_COINBASE_TX_HEX
 
@@ -70,7 +70,7 @@ const char     GENESIS_COINBASE_TX_HEX[]                     = "010a01ff000188f3
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
-   You can get this value by doing "print_block 2" in TurtleCoind. It is used to know what timestamp
+   You can get this value by doing "print_block 2" in gravyd. It is used to know what timestamp
    to import from when the block height cannot be found in the node or the node is offline. */
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1512800692;
 
@@ -269,6 +269,8 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 const char* const SEED_NODES[] = {
   "209.97.140.167:11897", //Alpha
   "104.248.162.67:11897", //Omega
+  "3.9.10.23:11897", //Bisto
+  "18.130.241.155:11897", //Knorr
 
 };
 } // CryptoNote
