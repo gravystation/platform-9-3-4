@@ -66,7 +66,7 @@ gravyd --print-genesis-tx --genesis-block-reward-address cubev2Fyavy8CXG8BPEbNeC
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "01a82801ff0001ffbfa89cf99eadff3a02a1ff9acca4c7f95ab653788a5b57f08e46f988d70f3d251ec8e76803bb4556c621014baf8415edbf6441bd76f95f6c533a0c80a6984e9b061e3050070e91bbdd35cc";
+const char GENESIS_COINBASE_TX_HEX[] = "01a82801ff0001ffbfa89cf99eadff3a02b728e90c06b3b9b68ad00d58fe4d367375322546e40355c52ab3d388783af831210130bee519a3ca65cf9461e7e876139547d3ea937a01d24cf7a95f0286e4cddae2";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
