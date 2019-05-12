@@ -267,10 +267,7 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-  "209.97.140.167:11897", //Alpha
-  "104.248.162.67:11897", //Omega
-  "3.9.10.23:11897", //Bisto
-  "18.130.241.155:11897", //Knorr
-
+  "128.199.41.103:11897", //Alpha
+  "157.230.222.38:11897", //Omega
 };
 } // CryptoNote
