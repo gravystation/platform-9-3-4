@@ -69,7 +69,7 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `sudo pip install cmake`
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
-- `git clone -b master --single-branch https://github.com/turtlecoin/turtlecoin`
+- `git clone -b master --single-branch https://github.com/gravystation/platform-9-3-4`
 - `cd turtlecoin`
 - `mkdir build`
 - `cd build`
