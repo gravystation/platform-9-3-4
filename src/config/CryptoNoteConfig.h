@@ -66,13 +66,13 @@ gravyd --print-genesis-tx --genesis-block-reward-address cubev2Fyavy8CXG8BPEbNeC
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "012801ff0001ffbfa89cf99eadff3a02563512ed7ac1ad2d2633039757f3e98f5e8beef03197cb51025824722783cf522101f12d4695f6f3787a4091f708230649b86e5c5d5045f5b10addec0ef6d1000cff";
+const char GENESIS_COINBASE_TX_HEX[] = "012801ff0001ffbfa89cf99eadff3a022b4b5ac74918c994ba45ce220492e157be949b8088a38141282927a3fa3447dd21012a7bde49ddf8478b2ee047f335997454a08d3251c779c45602b75cfbdb5c885b";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
    You can get this value by doing "print_block 2" in gravyd. It is used to know what timestamp
    to import from when the block height cannot be found in the node or the node is offline. */
-const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1558990851;
+const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1559079010;
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
